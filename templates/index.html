@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Secret number</title>
+</head>
+
+<body>
+    <h1>Guess the secret number</h1>
+    {% if user and user.secret_number %}
+        <form method="post" action="/result">
+            <input type="text" name="guess" placeholder="Enter the number">
+            <br>
+
+            <button type="submit">Submit</button>
+    </form>
+    {% else %}
+    #    <form method= "post" action="/login">
+    #        <input type="text" name="user-name" placeholder="Vpisi ime"><br>
+    #        <input type="email" name="user-email" placeholder="Vpisi email"><br>
+
+    #    <button type="submit">Poslji podatke</button>
+    #    </form>
+    {% endif %}
+</body>
+</html>
